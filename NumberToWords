@@ -1,0 +1,41 @@
+package Solution;
+
+import java.util.Scanner;
+
+public class NumberToWords {
+    public static void main(String[] args) {
+        System.out.print("Number: ");
+        Scanner input = new Scanner(System.in);
+        int value = input.nextInt();
+        int onesDigit;
+        int tensDigit;
+        int hundredsDigit;
+        String[] ones = {" ", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+                "eleven", "tweleve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
+        String[] tens = {"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
+
+        String[] hundreds = {" ","one hundred", "two hundred", "three hundred", "four hundred", "five hundred",
+                "six hundred", "seven hundred", "eight hundred", "nine hundred"};
+            if (value < 20) {
+                System.out.println( ones[value]);
+                value = input.nextInt();
+            } else if (value < 20 && value >100) {
+                tensDigit = value % 10;
+                onesDigit = value / 10;
+                System.out.print(tens[tensDigit] + " " + ones[onesDigit]);
+                value = input.nextInt();
+
+            } else{
+                hundredsDigit = value / 100;//234/100=2
+               tensDigit = (value% 100)/10;//234%100=34/10=3
+               onesDigit = (value % 100)%10;//0//234%100=34%10=4
+
+                System.out.print( hundreds[hundredsDigit] + " " + tens[tensDigit] + " " + ones[onesDigit]);
+
+
+            }
+        }
+    }
+    Output:
+    Number: 234
+two hundred thirty four
