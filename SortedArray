@@ -1,0 +1,19 @@
+package Solution;
+import java.util.*;
+public class SortedArray {
+
+	public static void main(String[] args) {
+		int XOR=0;
+	int a[] = {1, 1, 2, 2, 3, 3, 4, 50, 50, 65, 65};
+	for(int i=0;i<a.length;i++)
+	{
+		XOR=XOR^a[i];
+		//System.out.println(XOR);
+	}
+	System.out.println(XOR);
+
+	}
+}
+	
+
+
