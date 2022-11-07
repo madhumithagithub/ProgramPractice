@@ -1,0 +1,26 @@
+package Solution;
+import java.sql.*;
+public class SingleInstance {
+	public static void main(String[] args) {
+		class Single {
+			private Single(){};
+		      static Single obj;
+			static Single getobject()
+			{	
+		  	return obj=new Single();
+				}	
+		void display() {
+			System.out.println("hello");
+		}	
+		}
+		class Main{
+			public static void main(String[] args) {
+				
+				///s=obj;
+				Single s=Single.getobject();
+				s.display();
+			}
+		}
+	}
+
+}
