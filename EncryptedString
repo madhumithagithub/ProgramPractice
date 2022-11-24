@@ -1,0 +1,39 @@
+//Given Two Strings (lower case) with same length. 
+		//Each character in the first string should be encrypted based on the key value which is the corresponding 
+		//character in the second string. Write a program to encrypt the given string and print the encrypted string.
+		//Case 1 :
+		//Input : 
+		//   string 1 : bvjk
+//		    string 2 : afdr
+		//Output : 
+//		      cbnc
+
+		//Case 2 :
+		//Input : 
+//		      string 1 : mom
+//		      string 2 : dad
+		//Output : 
+		// qpq
+
+package oops;
+import java.util.Scanner;
+public class EncryptedString {
+			public static void main(String[] args) {
+				Scanner input=new Scanner(System.in);
+				String s1=input.next();
+				String s2=input.next();
+				
+				for(int i=0;i<s1.length();i++)
+				{
+					for(int j=0;j<s2.length();j++)
+					{
+						 int offset = (int)s2.charAt(j) - (int)'a'+ 1;
+						   
+						    System.out.print((char)( 'a' + (s1.charAt(i) - 'a' + offset ) % 26 ));
+						    i++;
+					}
+				}
+			}
+}
+
+
