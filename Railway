@@ -1,0 +1,31 @@
+package Program;
+import java.util.*;
+public class Railway {
+	 static void railwaydetails(int n)
+	{
+	  if(n>0&&n<73)	
+		  if(n%8==1 ||n%8==4)
+			  System.out.println(n+ "lower breth");
+		  else if(n%8==2||n%8==5)
+			  System.out.println(n+ " middle breth ");
+		  else if(n%8==3||n%8==6)
+			  System.out.println(n+ "upper breth");
+		  else if(n%8==7)
+			  System.out.println(n+"sidelowerbreth");
+		  else
+			  System.out.println(n+"sideupperbreth");
+	}
+	
+	public static void main(String[] args)
+	{
+		Scanner input = new Scanner(System.in);
+		System.out.println("enter the seatnumber:");
+		int n=input.nextInt();
+		Railway.railwaydetails(n);
+		
+	}
+}
+Input: 10 
+Output: middle berth
+Input: 7 
+Output: side lower berth
