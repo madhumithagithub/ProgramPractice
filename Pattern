@@ -1,0 +1,25 @@
+package class1;
+import java.util.*;
+public class Pattern {
+	public static void main(String[] args) {// 3 3 3 3 3
+		// 3 2 2 2 3
+		// 3 2 1 2 3
+		 //3 2 2 2 3
+		// 3 3 3 3 3 
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the input:");
+		int n=s.nextInt();
+		int len=n*2-1;
+		int out[][]= new int[len][len];
+		int k=0,l=1,temp=n;
+		for(int i=0;i<out.length;i++)
+		{
+			for(int j=0;j<out.length;j++)
+			{
+				System.out.print((j==len-1|| i==0||i==len-1||j==0 ) ? "3 ": (j==len-2 || i==1||i==len-2||j==1 )  ? "2 " :(j==len-3 || i==2||i==len-3||j==2 )? "1 " :"" );
+			}
+			System.out.println(" ");
+		}
+	}
+}
+
